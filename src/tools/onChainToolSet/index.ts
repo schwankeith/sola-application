@@ -3,6 +3,7 @@ import { createSwapTokensTool } from './swapTokens';
 import { createTransferSolTool } from './transferSolTx';
 import { createTransferSplTool } from './transferSpl';
 import { createResolveSnsNameTool } from './resolveSnsName';
+import { createGetBlinkTool } from './getBlink';
 
 export const onChainToolSet: ToolSetDescription = {
   slug: 'onChain',
@@ -19,6 +20,7 @@ export const getOnChainToolSet = (context: ToolContext) => {
       transferSol: createTransferSolTool(context),
       transferSpl: createTransferSplTool(context),
       resolveSnsNameTool: createResolveSnsNameTool(context),
+      getBlink: createGetBlinkTool(context),
     },
   };
 };
